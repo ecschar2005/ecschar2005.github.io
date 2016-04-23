@@ -8,7 +8,7 @@
 
    	<body>
 
-   		<div class="titles"> 
+   		<div class="rectcalc"> 
 
         <form id="calculator">
           Length:<br>
@@ -22,50 +22,87 @@
           <input class="button" type="button" value="Submit" onclick="printValues()">
         
         </form>
-      </div>
-
 
       <div class="info">
         <h1>Area</h1>
         <p>The area of your rectangle is <span id="Area"></span>.</p>
 
-   			<h1>Perimeter</h1>
-   			<p>The perimeter of your rectangle <span id="Perimeter"></span>.</p>
+        <h1>Perimeter</h1>
+        <p>The perimeter of your rectangle <span id="Perimeter"></span>.</p>
       </div>
-            
 
+      </div>
     
     <script>
       var rectArea = function(rectLength, width){
         console.log(rectLength);
         console.log(width);
-  return rectLength * width;
-}
+        return rectLength * width;
+      }
 
       var rectPerimeter = function(rectLength, width){
         return parseInt(rectLength) + parseInt(rectLength) + parseInt(width) + parseInt(width);
+      }    
+
+      var printValues = function(){
+        var form = document.getElementById('calculator');
+        var rectLength = form.elements.rectLength.value;
+        var width = form.elements.width.value;
+        document.getElementById("Area").innerHTML = rectArea(rectLength, width);
+        document.getElementById("Perimeter").innerHTML = rectPerimeter(rectLength, width); 
+         
       }
+    
+    </script>
 
+<div class="circcalc">
       
+      <div class="titles"> 
 
-//var radius = prompt("What is the radius of your circle?");
-
-//alert("The area of your circle is " + circleArea(radius));
-var printValues = function(){
-  var form = document.getElementById('calculator');
-  var rectLength = form.elements.rectLength.value;
-  var width = form.elements.width.value;
-  document.getElementById("Area").innerHTML = rectArea(rectLength, width);
-  document.getElementById("Perimeter").innerHTML = rectPerimeter(rectLength, width); 
-   
-}
-
-      
-  </script>
+        <form id="circlecalculator">
+          Radius:<br>
+          
+          <input type="text" name="radius" id="radius"></br>
+          <input class="button" type="button" value="Submit" onclick="printCircleValues()" 
+        </form>
 
 
-   	</body>
+        <h1>Area</h1>
+        <p>The area of your circle is <span id="CircArea"></span>.</p>
 
+        <h1>Diameter</h1>
+        <p>The Diameter is <span id="Diameter"></span>.</p>
+            
+
+        <h1>Circumference</h1>
+        <p>The circumference of your circle is <span id="Circumference"></span>.</p>
+    
+        <script>
+          var circleArea = function(radius){
+          return (3.14) * radius * radius;
+        }
+
+        var circleDiameter = function(radius){
+          return radius * 2;
+        }
+
+        var circleCircum = function(radius){
+          return (3.14 * 2) * radius;
+        }
+
+        var printCircleValues = function(){
+          var form = document.getElementById('circlecalculator');
+          var radius = form.elements.radius.value;
+          document.getElementById("CircArea").innerHTML = circleArea(radius);
+          document.getElementById("Diameter").innerHTML = circleDiameter(radius); 
+          document.getElementById("Circumference").innerHTML = circleCircum(radius); 
+        }
+
+      </script>
+    </div>
+  </div>
+
+</body>
 
 </html>
    

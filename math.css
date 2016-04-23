@@ -66,6 +66,13 @@ input[type=text] {
     width: 50%;
     postion: absolute;
     margin-top: 20px;
+    float: right;
+
+}
+.rectcalc{
+
+    float: left;
+    clear: none;
 }
 
 
