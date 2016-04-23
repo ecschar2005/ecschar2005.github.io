@@ -1,0 +1,76 @@
+.titles h1{
+
+	font-family: "Papyrus";
+}
+
+input[type=text] {
+    background-color: grey;
+    color: white;
+}
+
+.button:hover {
+    background-color: grey; 
+    color: white;
+}
+
+.button {
+
+	    background-color: grey; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 100px ;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: grey;
+    color: white;
+}
+#calculator {
+    padding-left: 25px;
+}
+
+
+
+
+.titles  {
+    
+   font-family:"Century Gothic";
+   font-weight: 900;
+    
+    }
+
+.info {
+    font-weight: bold;
+    font-family: "Century Gothic";
+    color: black;
+}
+
+.rectcalculator {
+    float: right;
+    postion: absolute;
+    margin-top: 20px;
+}
+
+.circcalc{
+    width: 50%;
+    postion: absolute;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+

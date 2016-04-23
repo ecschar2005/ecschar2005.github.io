@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+
+   	    <link href="math.css" rel="stylesheet">
+   	</head>
+
+   	<body>
+
+   		<div class="titles"> 
+
+        <form id="calculator">
+          Length:<br>
+          
+          <input type="text" name="rectLength" id="rectLength"></br>
+
+          Width:<br>
+          
+          <input type="text" name="width" id="width"></br>
+          
+          <input class="button" type="button" value="Submit" onclick="printValues()">
+        
+        </form>
+      </div>
+
+
+      <div class="info">
+        <h1>Area</h1>
+        <p>The area of your rectangle is <span id="Area"></span>.</p>
+
+   			<h1>Perimeter</h1>
+   			<p>The perimeter of your rectangle <span id="Perimeter"></span>.</p>
+      </div>
+            
+
+    
+    <script>
+      var rectArea = function(rectLength, width){
+        console.log(rectLength);
+        console.log(width);
+  return rectLength * width;
+}
+
+      var rectPerimeter = function(rectLength, width){
+        return parseInt(rectLength) + parseInt(rectLength) + parseInt(width) + parseInt(width);
+      }
+
+      
+
+//var radius = prompt("What is the radius of your circle?");
+
+//alert("The area of your circle is " + circleArea(radius));
+var printValues = function(){
+  var form = document.getElementById('calculator');
+  var rectLength = form.elements.rectLength.value;
+  var width = form.elements.width.value;
+  document.getElementById("Area").innerHTML = rectArea(rectLength, width);
+  document.getElementById("Perimeter").innerHTML = rectPerimeter(rectLength, width); 
+   
+}
+
+      
+  </script>
+
+
+   	</body>
+
+
+</html>
+   
