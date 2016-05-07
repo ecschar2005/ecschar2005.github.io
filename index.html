@@ -8,6 +8,10 @@
 
    	<body>
 
+      <div class="header">
+      </div>
+
+
    		<div class="rectcalc"> 
 
         <form id="calculator">
@@ -19,7 +23,7 @@
           
           <input type="text" name="width" id="width"></br>
           
-          <input class="button" type="button" value="Submit" onclick="printValues()">
+          <input class="button" type="button" value="Submit" onclick="rectprintValues()">
         
         </form>
 
@@ -44,7 +48,7 @@
         return parseInt(rectLength) + parseInt(rectLength) + parseInt(width) + parseInt(width);
       }    
 
-      var printValues = function(){
+      var rectprintValues = function(){
         var form = document.getElementById('calculator');
         var rectLength = form.elements.rectLength.value;
         var width = form.elements.width.value;
@@ -54,8 +58,56 @@
       }
     
     </script>
+  
 
-<div class="circcalc">
+
+
+    <div class="tricalc"> 
+
+        <form id="tricalculator">
+          Base:<br>
+          
+          <input type="text" name="triBase" id="triBase"></br>
+
+          Height:<br>
+          
+          <input type="text" name="height" id="height"></br>
+          
+          <input class="button" type="button" value="Submit" onclick="printValues()">
+        
+        </form>
+
+      <div class="info">
+        <h1>Area</h1>
+        <p>The area of your triangle is <span id="triArea"></span>.</p>
+
+        
+      </div>
+
+      </div>
+    
+    <script>
+      var triArea = function(triBase, height){
+        console.log(triBase);
+        console.log(height);
+        return triBase * height /2;
+      }
+
+         
+
+      var printValues = function(){
+        var form = document.getElementById('tricalculator');
+        var triBase = form.elements.triBase.value;
+        var height = form.elements.height.value;
+        document.getElementById("triArea").innerHTML = triArea(triBase, height);
+ 
+         
+      }
+    
+    </script>
+
+
+  <div class="circcalc">
       
       <div class="titles"> 
 

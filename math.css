@@ -1,3 +1,9 @@
+.header{
+    height: 100px;
+    background-color: Azure;
+}
+
+
 .titles h1{
 
 	font-family: "Papyrus";
@@ -56,23 +62,25 @@ input[type=text] {
     color: black;
 }
 
-.rectcalculator {
-    float: right;
-    postion: absolute;
-    margin-top: 20px;
-}
+
 
 .circcalc{
     width: 50%;
-    postion: absolute;
-    margin-top: 20px;
+    clear: none;
+    margin-top: -325px;
     float: right;
 
 }
 .rectcalc{
 
+    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/cf/47/3b/cf473b87407faf5e799f86096a471bd2.jpg");
+    width: 300px;
     float: left;
     clear: none;
+}
+.tricalc{
+    background-image:url("http://www.vectorea.com/tvx_uploads/10/2019-colorful-tone-triangle-mosaic-background.jpg", width:100px);
+
 }
 
 
